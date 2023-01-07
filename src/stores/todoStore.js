@@ -15,7 +15,7 @@ loadTodos();
 export const addTodo = async (text, user_id) => {
     console.log(user_id);
     const {data, error} = await supabase.from('todos').insert([{text, user_id,completed:false}]).select();
-    
+
     if(error) {
         return console.error(error);
     }
@@ -32,7 +32,7 @@ export const updateTodo = async (text,id) =>{
 
 export const deleteTodo = async (id) => {
     const {error} = await supabase.from('todos').delete().match({id});
-    
+
     if(error) {
         return console.error(error);
     }

@@ -1,6 +1,6 @@
 <script>
 	import { supabase } from '../supabase.js';
-    import { throwable } from "../throwable.js";
+	import { throwable } from "../throwable.js";
 
 	let loading = false;
 	let email;
@@ -8,7 +8,7 @@
 	const handleRegister = async () => {
 		try {
 			loading = true;
-		    await throwable( supabase.auth.signUp({ email, password }) );
+			await throwable( supabase.auth.signUp({ email, password }) );
 		} catch (error) {
 			console.error(error);
 		} finally {
@@ -29,7 +29,7 @@
 			placeholder="Your email"
 			type="email"
 			bind:value={email}
-            required
+			required
 		/>
 
 		<label class="font-bold mb-2 text-gray-800" for="passwd"> Password </label>
@@ -38,13 +38,13 @@
 			name="passwd"
 			placeholder="Your password"
 			type="password"
-            minlength="6"
+			minlength="6"
 			bind:value={password}
 			required
 		/>
 	</div>
 	<button
-        disabled={loading}
+		disabled={loading}
 		class="w-full shadow-sm rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
 	>
 		Log in

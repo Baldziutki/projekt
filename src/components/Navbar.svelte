@@ -13,6 +13,6 @@
         class="shadow-sm rounded bg-blue-500 hover:bg-blue-600 text-white py-2 px-4"
         on:click={logout}
     >
-        Log Out 
+        Log Out
     </button>
 </div>

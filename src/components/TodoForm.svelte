@@ -2,7 +2,7 @@
 
     import {addTodo} from "../stores/todoStore.js";
     let todo = '';
-    export let session; 
+    export let session;
     const handleSubmit = () => {
         addTodo(todo,session.user.id)
         todo = '';
@@ -15,10 +15,10 @@
     <label class="font-bold mb-2 text-gray-800" for="todo">
         Todo
     </label>
-    <input type="text" 
-    bind:value={todo} 
-    name="todo" 
-    placeholder="Wpisz co potrzebujesz zrobic" 
+    <input type="text"
+    bind:value={todo}
+    name="todo"
+    placeholder="Wpisz co potrzebujesz zrobic"
     class="appearance-none shadow-sm border-2 border-gray-200 p-2 focus:outline-none focus:border-gray-500 rounded-lg"
     />
     </div>

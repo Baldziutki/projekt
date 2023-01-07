@@ -9,19 +9,19 @@
 
 <main class="p-4">
 	<h1 class="
-        text-6xl 
-        font-black 
-        text-center 
-        md:text-6xl 
-        bg-gradient-to-r 
-        from-indigo-500 
-        via-purple-500 
-        to-pink-500 
-        bg-clip-text 
-        text-transparent 
-        mb-2 
+        text-6xl
+        font-black
+        text-center
+        md:text-6xl
+        bg-gradient-to-r
+        from-indigo-500
+        via-purple-500
+        to-pink-500
+        bg-clip-text
+        text-transparent
+        mb-2
         md:leading-[normal]
-        leading-[normal] 
+        leading-[normal]
     ">
         My todos
     </h1>

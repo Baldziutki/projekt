@@ -5,7 +5,7 @@
     import { onMount } from 'svelte'
     import { loadTodos } from "../stores/todoStore";
 
-  
+
   onMount(() => {
     const {
       data: { subscription },
@@ -18,9 +18,9 @@
       loadTodos();
     }
   })
-    
+
   </script>
-  
+
 <div class="container mx-auto my-6 max-w-lg">
     <slot></slot>
 </div>
