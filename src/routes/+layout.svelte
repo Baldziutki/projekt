@@ -3,9 +3,8 @@
     import { supabase } from '../supabase.js'
     import { invalidate } from '$app/navigation'
     import { onMount } from 'svelte'
-    import Auth from "../components/Auth.svelte";
     import { loadTodos } from "../stores/todoStore";
-	import Register from "../components/Register.svelte";
+
   
   onMount(() => {
     const {

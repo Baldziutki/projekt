@@ -2,10 +2,11 @@
 
     import {addTodo} from "../stores/todoStore.js";
     let todo = '';
+    export let session; 
     const handleSubmit = () => {
-        addTodo(todo)
+        addTodo(todo,session.user.id)
         todo = '';
-        console.log("submitting")
+        console.log(session)
     }
 </script>
 

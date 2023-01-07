@@ -29,6 +29,7 @@
 			placeholder="Your email"
 			type="email"
 			bind:value={email}
+            required
 		/>
 
 		<label class="font-bold mb-2 text-gray-800" for="passwd"> Password </label>
@@ -37,6 +38,7 @@
 			name="passwd"
 			placeholder="Your password"
 			type="password"
+            minlength="6"
 			bind:value={password}
 			required
 		/>

@@ -5,12 +5,15 @@
 	let loading = false;
 	let email;
 	let password;
+    let errorMessage = "";
 	const handleLogin = async () => {
 		try {
+            errorMessage = "";
 			loading = true;
 		    await throwable( supabase.auth.signInWithPassword({ email, password }) );
 		} catch (error) {
 			console.error(error);
+            errorMessage = error.message;
 		} finally {
 			loading = false;
 		}
@@ -21,6 +24,11 @@
 <h1 class="text-2xl font-bold text-center text-gray-800- md:text-3xl">Log in</h1>
 
 <form on:submit|preventDefault={handleLogin}>
+    {#if errorMessage}
+    <div>
+        {errorMessage}
+    </div>
+    {/if}
 	<div class="flex flex-col text-sm mb-2">
 		<label class="font-bold mb-2 text-gray-800" for="email"> Email </label>
 		<input
@@ -29,6 +37,7 @@
 			placeholder="Your email"
 			type="email"
 			bind:value={email}
+            required
 		/>
 
 		<label class="font-bold mb-2 text-gray-800" for="passwd"> Password </label>
