@@ -4,7 +4,7 @@ import { supabase } from "../supabase.js";
 export const todos = writable([]);
 
 export const loadTodos = async () => {
-	const { data, error } = await supabase.from('todos').select();
+	const { data, error } = await supabase.from('todos').select().order('completed').order('id');
 	if (error) {
 		return console.error(error);
 	}

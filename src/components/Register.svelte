@@ -6,11 +6,13 @@
 	let email;
 	let password;
 	let errorMessage = '';
+	export let showLogin;
 	const handleRegister = async () => {
 		try {
 			errorMessage = '';
 			loading = true;
 			await throwable(supabase.auth.signUp({ email, password }));
+			showLogin();
 		} catch (error) {
 			console.error(error);
 			errorMessage = error.message;

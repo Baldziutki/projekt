@@ -17,6 +17,13 @@
 	let textComponent = null;
 	let currentText = 0;
 
+	function showLogin(){
+		currentView = 0;
+		viewportComponent = view[0];
+		currentText = 0;
+		textComponent = text[0];
+	}
+
 	function toggleText() {
 		currentText = currentText == 0 ? 1 : 0;
 	}
@@ -63,7 +70,7 @@
 				on:outroend={updateTextComponent}
 				transition:fade
 			>
-				<svelte:component this={viewportComponent} />
+				<svelte:component this={viewportComponent}  showLogin={showLogin}/>
 			</div>
 			<button
 				class="text-purple-300 hover:text-purple-500"
