@@ -1,11 +1,16 @@
 <script>
 	import { addTodo } from '../stores/todoStore.js';
 	let todo = '';
+	let errorMessage = '';
 	export let session;
 	const handleSubmit = () => {
+		if(todo===''){
+			errorMessage = 'Wrong value';
+		}else{
 		addTodo(todo, session.user.id);
 		todo = '';
-		console.log(session);
+		errorMessage = '';
+		}
 	};
 </script>
 
@@ -27,4 +32,7 @@
 	>
 		Submit
 	</button>
+	{#if errorMessage}
+		<p class="text-red-600">{errorMessage}!</p>
+	{/if}
 </form>
