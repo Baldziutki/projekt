@@ -12,7 +12,7 @@
 			errorMessage = '';
 			loading = true;
 			await throwable(supabase.auth.signInWithPassword({ email, password }));
-			await loadTodos();
+
 		} catch (error) {
 			console.error(error);
 			errorMessage = error.message;

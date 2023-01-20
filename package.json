@@ -28,6 +28,7 @@
 		"@supabase/auth-helpers-sveltekit": "^0.8.6",
 		"@supabase/supabase-js": "^2.2.3",
 		"bcrypt": "^5.1.0",
-		"date-picker-svelte": "^2.2.5"
+		"date-picker-svelte": "^2.2.5",
+		"dayjs": "^1.11.7"
 	}
 }
